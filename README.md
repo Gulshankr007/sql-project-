@@ -62,6 +62,7 @@ SQL Queries Solutions
 Below are the solutions for each question in this project:
 
 Q1: List All Distinct Users and Their Stats
+
 SELECT 
     username,
     COUNT(id) AS total_submissions,
@@ -72,6 +73,8 @@ ORDER BY total_submissions DESC;
 
 
 Q2: Calculate the Daily Average Points for Each User
+
+
 SELECT 
     TO_CHAR(submitted_at, 'DD-MM') AS day,
     username,
@@ -82,6 +85,8 @@ ORDER BY username;
 
 
 Q3: Find the Top 3 Users with the Most Correct Submissions for Each Day
+
+
 WITH daily_submissions AS (
     SELECT 
         TO_CHAR(submitted_at, 'DD-MM') AS daily,
@@ -107,6 +112,8 @@ WHERE rank <= 3;
 
 
 Q4: Find the Top 5 Users with the Highest Number of Incorrect Submissions
+
+
 SELECT 
     username,
     SUM(CASE WHEN points < 0 THEN 1 ELSE 0 END) AS incorrect_submissions,
@@ -120,6 +127,8 @@ ORDER BY incorrect_submissions DESC;
 
 
 Q5: Find the Top 10 Performers for Each Week
+
+
 SELECT *  
 FROM (
     SELECT 
