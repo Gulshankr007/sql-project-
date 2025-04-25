@@ -1,4 +1,4 @@
-# sql-project
+![SQL](https://github.com/user-attachments/assets/b73c8d8b-594c-4533-849f-be4826dfebd0)
 
 Project Overview
 
